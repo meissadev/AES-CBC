@@ -16,9 +16,9 @@ def generate_key(key_size):
     key_name = input("Nom de la cle: ")
 
     if key_name.endswith(".key"):
-        key_location = "./keys/" + key_name
+        key_location = "./../keys/" + key_name
     else:
-        key_location = "./keys/" + key_name + ".key"
+        key_location = "./../keys/" + key_name + ".key"
 
     try:
         with open(key_location, "x") as key_f:

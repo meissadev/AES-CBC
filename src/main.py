@@ -21,6 +21,7 @@ def encrypt_f(file_location):
     try:
         with open(file_location + ".enc", "wb") as out_f:
             out_f.write(b64encode(encrypted_content))
+            print("Le fichier a ete chiffre avec succes")
     except:
         print("Une erreur est survenue lors de la sauvegarde")
         sys.exit(1)
@@ -42,6 +43,7 @@ def decrypt_f(file_location):
     try:
         with open(file_location.replace("enc", "dec"), "w") as out_f:
             out_f.write(unpad(decrypted_content, AES.block_size).decode())
+            print("Le fichier a ete dechiffre avec succes")
     except:
         print("Une erreur est survenue lors de la sauvegarde du fichier dechiffre")
         sys.exit(1)
