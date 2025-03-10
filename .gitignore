@@ -1,1 +1,12 @@
-.venv/Scripts/*
+# Ignorer les environnements virtuels
+.venv/
+
+# Ignorer les fichiers sensibles
+keys/
+files/
+
+# Ignorer les fichiers temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.log
